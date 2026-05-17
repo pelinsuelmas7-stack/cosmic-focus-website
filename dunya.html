@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Earth Focus Room with balanced pomodoro timer and ambient study sounds.">
+    <meta name="keywords" content="earth focus room, pomodoro, study timer, productivity, cosmic focus">
+    <meta name="author" content="Pelinsu Elmas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dünya Study Room | Cosmic Focus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dunya.css">
+    <script src="dunya.js" defer></script>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        COSMIC FOCUS
+    </div>
+
+    <div class="nav-right">
+        <a href="index.html" class="nav-link">Ana Sayfaya dön.</a>
+    </div>
+
+</nav>
+
+
+<!-- STUDY ROOM -->
+<section class="study-room">
+
+    <!-- BACKGROUND VIDEO -->
+    <video autoplay muted loop class="bg-video">
+        <source src="assets/dunyadayiz.mp4" type="video/mp4">
+    </video>
+
+    <!-- DARK OVERLAY -->
+    <div class="overlay"></div>
+
+    <!-- TIMER AREA -->
+   <div class="timer-card">
+
+    <p id="mode-text">WORK MODE</p>
+
+    <h1 id="timer">25:00</h1>
+    <div class="progress">
+        <div class="progress-bar"></div>
+    </div>
+    <div class="buttons">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="resetBtn">Reset</button>
+    </div>
+
+    <!-- SOUND PANEL -->
+    <div class="sound-panel">
+
+        <button class="sound-btn" data-sound="rain">
+            🌧 Rain
+        </button>
+
+        <button class="sound-btn" data-sound="fire">
+            🔥 Fireplace
+        </button>
+
+        <button class="sound-btn" data-sound="noise">
+            🌫 White Noise
+        </button>
+        <button class="sound-btn" id="muteBtn">
+            🔇 Sound Off
+        </button>
+
+    </div>
+    <!-- AUDIO ELEMENTS -->
+        <audio id="rainSound" src="./sounds/rain.mp3" loop></audio>
+        <audio id="fireSound" src="./sounds/fireplace.mp3" loop></audio>
+        <audio id="noiseSound" src="./sounds/whitenoise.mp3" loop></audio>
+    </div>
+
+</section>
+
+</body>
+</html>

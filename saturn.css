@@ -1,0 +1,253 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* BODY */
+body{
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background: #0b1c2c;
+}
+
+/* NAVBAR */
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background: rgba(11, 28, 44, 0.6);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(96,165,250,0.2);
+    z-index: 100;
+}
+
+.logo{
+    color: #eaf2ff;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-link{
+    color: #cfe3ff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: #60a5fa;
+}
+
+.nav-cta{
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(96,165,250,0.3);
+    background: rgba(255,255,255,0.05);
+}
+
+/* STUDY ROOM */
+
+.study-room{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* VIDEO */
+
+.bg-video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* OVERLAY */
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 1;
+}
+
+/* TIMER CARD */
+
+.timer-card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    text-align: center;
+    color: white;
+    padding: 45px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow:
+    0 0 40px rgba(96,165,250,0.25),
+    0 0 80px rgba(96,165,250,0.15);
+}
+
+/* MODE TEXT */
+
+#mode-text{
+    color: #cfe3ff;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+/* TIMER */
+
+#timer{
+    font-size: 110px;
+    font-family: 'Exo 2', sans-serif;
+    margin-bottom: 30px;
+    text-shadow:
+    0 0 20px rgba(255,255,255,0.4),
+    0 0 50px rgba(96,165,250,0.3);
+}
+
+/* BUTTON AREA */
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* BUTTONS */
+
+.buttons button{
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* START BUTTON */
+
+#startBtn{
+    background: #60a5fa;
+    color: white;
+}
+
+#startBtn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(96,165,250,0.5);
+}
+
+/* PAUSE BUTTON */
+
+#pauseBtn{
+    background: rgba(255,255,255,0.12);
+    color: white;
+}
+
+#pauseBtn:hover{
+    background: rgba(255,255,255,0.2);
+}
+
+/* RESET BUTTON */
+
+#resetBtn{
+    background: rgba(255,255,255,0.08);
+    color: #dbeafe;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+#resetBtn:hover{
+    background: rgba(255,255,255,0.16);
+}
+
+/* SOUND PANEL */
+
+.sound-panel{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* SOUND BUTTON */
+
+.sound-btn{
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.06);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sound-btn:hover{
+    transform: translateY(-2px);
+    border-color: #60a5fa;
+    box-shadow: 0 0 15px rgba(96,165,250,0.3);
+}
+.progress{
+    width: 100%;
+    height: 6px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar{
+    height: 100%;
+    width: 0%;
+    background: #60a5fa;
+    transition: width 0.5s linear;
+}
+/* RESPONSIVE */
+
+@media(max-width: 768px){
+
+    .navbar{
+        padding: 0 20px;
+    }
+
+    .logo{
+        font-size: 18px;
+    }
+
+    #timer{
+        font-size: 70px;
+    }
+
+    .timer-card{
+        width: 90%;
+
+        padding: 30px 20px;
+    }
+
+    .buttons{
+        flex-wrap: wrap;
+    }
+
+}
